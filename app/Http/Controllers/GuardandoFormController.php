@@ -192,7 +192,7 @@ class GuardandoFormController extends Controller
     }
     public function evaluacion(Request $request){
     
-         //dd($request->all());
+
         $evaluacion = Evaluacion::findOrFail($request->evaluacionId);
         $evaluacion->fecha =$request->fechaa;
         $evaluacion->hora_citado=$request->hoci;
