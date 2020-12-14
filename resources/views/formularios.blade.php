@@ -20,7 +20,9 @@
                 <th scope="col">cargo</th>
                 <th scope="col">edad</th>
                 <th scope="col">cedula</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Accion</th>
+                <th scope="col">modificar</th>
+                <th scope="col">eliminar</th>
                
                 </tr>
             </thead>
@@ -35,7 +37,9 @@
                 <td>{{$nombre->cargo}}</td>
                 <td>{{$nombre->edad}}</td>
                 <td>{{$nombre->cedula}}</td>
-                <td><a type="button" href="/usuario/{{ $nombre->id }}" class="btn btn-primary">Ver</a></td>
+                <!-- <td><a type="button" href="/usuario/{{ $nombre->id }}" class="btn btn-primary">Ver</a></td> -->
+                <td><a type="button" href="/usuario/{{ $nombre->id }}" class="btn btn-primary">Ver y  Modificar</a></td>
+                <td><a type="button" href="/borrar/{{ $nombre->id }}" class="btn btn-primary">eliminar</a></td>
                 
        
                 </tr>

@@ -223,11 +223,131 @@ class GuardandoFormController extends Controller
 
     public function usuario($id) {
        //$usuario = DatosPersonales::findOrFail($id);
-      $usuario = DatosPersonales::where('id', $id)->with('datospersonales2','antecedentes','Evaluacion')->get();
+      $usuario = DatosPersonales::where('id', $id)->with('datospersonales2','antecedentes','evaluacion')->get();
        return view('vistaUsuario',compact('usuario'));
 
     }
-   
+
+    public function borrar($id) {
+        $usuario = DatosPersonales::findOrFail($id)->delete();
+        return view('home');
+ 
+     }
+
+    public function update(Request $request, $id) {
+        //dd($request->all());
+        $datos = DatosPersonales::findOrFail($id);
+        
+        $datos->fecha = $request->fecha;
+        $datos->hora_citado = $request->hora;
+        $datos->nombre_aspirante =$request->nombreAspirante;
+        $datos->cargo =$request->cargo;
+        $datos->edad =$request->edad;
+        $datos->cedula =$request->cedula;
+        $datos->titulo_otorgado = $request->titulootorgado;
+        $datos->direccion =$request->direccion;
+        $datos->telefono =$request->telefono;
+        $datos->estado_civil =$request->estadocivil;
+        $datos->sexo = $request->sexo;
+        $datos->municipio =$request->ubiareametro;
+        $datos->vivienda =$request->vivienda;
+        $datos->valor_arriendo =$request->valorarriendo;
+        $datos->valor_egresos =$request->valoregresos;
+        $datos->ref_personal = $request->referenciapersonal;
+        $datos->nombre_de_ref = $request->nombrereferencia;
+        $datos->nombre1 =$request->nombre1;
+        $datos->parentesco1 =$request->parentesco1;
+        $datos->edad1 = $request->edad1;
+        $datos->nivel_educativo1 =$request->niveleducativo1;
+        $datos->ocupacion1 =$request->ocupacion1;
+        $datos->nombre2 =$request->nombre2;
+        $datos->parentesco2 =$request->parentesco2;
+        $datos->edad2 = $request->edad2;
+        $datos->nivel_educativo2 =$request->niveleducativo2;
+        $datos->ocupacion2 =$request->ocupacion2;
+        $datos->nombre3 =$request->nombre3;
+        $datos->parentesco3 =$request->parentesco3;
+        $datos->edad3 = $request->edad3;
+        $datos->nivel_educativo3 =$request->niveleducativo3;
+        $datos->ocupacion3 =$request->ocupacion3;
+        $datos->nombre4 =$request->nombre4;
+        $datos->parentesco4 =$request->parentesco4;
+        $datos->edad4 = $request->edad4;
+        $datos->nivel_educativo4 =$request->niveleducativo4;
+        $datos->ocupacion4 =$request->ocupacion4;
+        $datos->nombre5 =$request->nombre5;
+        $datos->parentesco5 =$request->parentesco5;
+        $datos->edad5 = $request->edad5;
+        $datos->nivel_educativo5 =$request->niveleducativo5;
+        $datos->ocupacion5 =$request->ocupacion5;
+        $datos->nombre6 =$request->nombre6;
+        $datos->parentesco6 =$request->parentesco6;
+        $datos->edad6 = $request->edad6;
+        $datos->nivel_educativo6 =$request->niveleducativo6;
+        $datos->ocupacion6 =$request->ocupacion6;
+        $datos->institucion_edu1 = $request->institucion1;
+        $datos->año_finalizado1 = $request->añofinalizado1;
+        $datos->titulo_obtenido1 = $request->titulooptenido1;
+        $datos->institucion_edu2 = $request->institucioedu2;
+        $datos->año_finalizado2= $request->añofinalizado2;
+        $datos->titulo_obtenido2 = $request->titulooptenido2;
+        $datos->institucion_edu3 = $request->instiedu3;
+        $datos->año_finalizado3= $request->añofinalizado3;
+        $datos->titulo_obtenido3 = $request->titulooptenido3;
+        $datos->institucion_edu4 = $request->instiedu4;
+        $datos->año_finalizado4= $request->añofinalizado4;
+        $datos->titulo_obtenido4 = $request->titulooptenido4;
+        $datos->institucion_edu5 = $request->instiedu5;
+        $datos->año_finalizado5= $request->añofinalizado5;
+        $datos->titulo_obtenido5 = $request->titulooptenido5;
+        $datos->save;
+
+        $datos2 =  datospersonales2::where('aspirante_id',$id)->first();
+        //dd($datos2);
+        
+        
+        $datos2->nombre_de_la_emp1 =$request->nombreempr1;
+        $datos2->tiempo1 =$request->tiempo1;
+        $datos2->motivo_retiro1= $request->motivoretiro1;
+        $datos2->observaciones_y_fun1= $request->obserfuncio1;
+        $datos2->nombre_de_la_emp2=$request->nombreempresa2;
+        $datos2->tiempo2 =$request->tiempo2;
+        $datos2->motivo_retiro2= $request->motivoretiro2;
+        $datos2->observaciones_y_fun2= $request->obserfuncio2;
+        $datos2->nombre_de_la_empresa3=$request->nombreempresa3;
+        $datos2->tiempo3 =$request->tiempo3;
+        $datos2->motivo_retiro3= $request->motivoretiro3;
+        $datos2->observaciones_y_fun3= $request->obserfuncio3;
+        $datos2->nombre_de_la_empresa4=$request->nombreempresa4;
+        $datos2->tiempo4 =$request->tiempo4;
+        $datos2->motivo_retiro4= $request->motivoretiro4;
+        $datos2->observaciones_y_fun4= $request->obserfuncio4;
+        $datos2->nombre_de_la_empresa5=$request->nombreempresa5;
+        $datos2->tiempo5 =$request->tiempo5;
+        $datos2->motivo_retiro5= $request->motivoretiro5;
+        $datos2->observaciones_y_fun5= $request->obserfuncio5;
+        $datos2->nombre_de_la_empresa6=$request->nombreempresa6;
+        $datos2->tiempo6 =$request->tiempo6;
+        $datos2->motivo_retiro6= $request->motivoretiro6;
+        $datos2->observaciones_y_fun6= $request->obserfuncio6;
+        $datos2->frecuencia1= $request->frecuencia1;
+        $datos2->nivel_de_consumo1= $request->nivelconsumo1;
+        $datos2->observaciones1= $request->observaciones1;
+        $datos2->frecuencia2= $request->frecuencia2;
+        $datos2->nivel_de_consumo2= $request->nivelconsumo2;
+        $datos2->observaciones2= $request->observaciones2;
+        $datos2->frecuencia3= $request->frecuencia3;
+        $datos2->nivel_de_consumo3= $request->nivelconsumo3;
+        $datos2->observaciones3= $request->observaciones3;
+        $datos2->frecuencia4= $request->frecuencia4;
+        $datos2->nivel_de_consumo4= $request->nivelconsumo4;
+        $datos2->observaciones4= $request->observaciones4;
+        $datos2->save();
+        return view('home');
+        
+    }
+
+      
   
    
  }

@@ -18,6 +18,12 @@ class DatosPersonales extends Model
         return $this->hasMany('App\GuardandoForm', 'aspirante_id');
     }
 
+    public function evaluacion()
+    {
+        return $this->hasMany('App\Evaluacion', 'aspirante_id');
+    }
+
+
 
 
 }

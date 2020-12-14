@@ -48,9 +48,14 @@
                         <a class="navbar-brand" href="{{ route('evaluacion') }}">
                             Evaluación de candidato por Gerencia
                         </a>
+                        
+                        @if(Auth::user()->roles[0]->name == 'Admin')
                         <a class="navbar-brand" href="{{ route('formularios') }}">
                             Datos de los formularios
                         </a>
+                        @endif
+
+
                         @endguest
                     </ul>
 
@@ -69,7 +74,8 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }} 
+                                    <span class="badge badge-pill badge-success">{{ Auth::user()->roles[0]->name }}</span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

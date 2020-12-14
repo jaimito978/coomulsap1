@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +24,9 @@ Route::post('/evaluacion','GuardandoFormController@evaluacion')->name('evaluacio
 Route::post('/formularios','GuardandoFormController@formularios')->name('formularios');
 
 Route::get('/usuario/{id}','GuardandoFormController@usuario')->name('usuario');
+Route::get('/borrar/{id}','GuardandoFormController@borrar')->name('borrar');
 
-
-
-
+Route::patch('/update/{id}','GuardandoFormController@update')->name('GuardandoFormController.update');
 
 
 Auth::routes();
@@ -37,6 +37,7 @@ Route::get('/formularios', 'HomeController@formularios')->name('formularios');
 Route::get('/evaluacion', 'HomeController@evaluacion')->name('evaluacion');
 Route::get('/datos', 'HomeController@datos')->name('datos');
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 
