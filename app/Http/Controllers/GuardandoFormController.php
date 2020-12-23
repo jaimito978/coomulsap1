@@ -343,6 +343,9 @@ class GuardandoFormController extends Controller
         $datos2->nivel_de_consumo4= $request->nivelconsumo4;
         $datos2->observaciones4= $request->observaciones4;
         $datos2->save();
+
+
+        
         return view('home');
         
     }

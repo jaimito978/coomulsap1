@@ -371,6 +371,469 @@
             </thead>
            </table>
 
+          
+            
+           <div class="container-fluid">
+        <div class=”container”>
+      
+        <div>
+           <h1 class="text-center mt-4"> FORMATO <h1>
+            <h1 class="text-center mt-4"> ENTREVISTA DE SELECCION<h1>
+            <h2 class="text-center mt-5">5.2. Antecedentes de salud.</h2>
+            </div>
+   <!--primer doble-->
+   <div class="row mt-3">
+  
+<div class="col-md-6 form-group row">
+    <label for="inputEPS" class="col-sm-2 col-form-label">EPS:</label>
+    <div class="col-sm-10">
+    <input type="text" name="Eps"  value="{{$usuario[0]->antecedentes[0]->eps}}"class="form-control">
+    </div>
+</div>
+
+<div class="col-md-6 form-group row">
+    <label for="inputAFP" class="col-sm-2 col-form-label">AFP:</label>
+    <div class="col-sm-10">
+    <input type="text" name="AFP" value="{{$usuario[0]->antecedentes[0]->afp}}" class="form-control" >
+    </div>
+</div>
+
+<!--segundo doble-->
+
+<div class="col-md-6 form-group row">
+<label for="inputUM" class="col-sm-6 col-form-label">Última consulta médica:</label>
+<div class="col-sm-6">
+    <input type="date" name="ultima" value="{{$usuario[0]->antecedentes[0]->ultima_consulta_medica}}" class="form-control">
+</div>
+</div>
+
+<div class="col-md-6 form-group row">
+<label for="inputCIRU" class="col-sm-2 col-form-label">Cirugías</label>
+<div class="col-sm-10">
+    <input type="text" name="cirugias" value="{{$usuario[0]->antecedentes[0]->cirugias}}" class="form-control"  placeholder="Cirugías" >
+</div>
+</div>
+
+
+<!--tercer doble-->
+
+<div class="col-md-6 form-group row">
+<label for="inputMC" class="col-sm-4 col-form-label">Motivo consulta:</label>
+    <div class="col-sm-8">
+    <input type="text" name="motivoconsulta" value="{{$usuario[0]->antecedentes[0]->motivo_consulta}}" class="form-control">
+    </div>
+</div>
+
+<div class="col-md-6 form-group row">
+    <label for="inputINTO" class="col-sm-3 col-form-label">Intoxicaciones:</label>
+    <div class="col-sm-9">
+    <input type="text" name="intoxicaciones" value="{{$usuario[0]->antecedentes[0]->intoxicaciones}}"class="form-control">
+    </div>
+</div>
+
+
+<!--cuarto doble-->
+
+
+<div class="col-md-6 form-group row">
+<label for="inputAS" class="col-sm-4 col-form-label">Accidentes sufridos:</label>
+<div class="col-sm-8">
+    <input type="text" name="accidentessufridos" value="{{$usuario[0]->antecedentes[0]->accidentes_sufridos}}"class="form-control">
+</div>
+</div>
+
+<div class="col-md-6 form-group row">
+<label for="inputFRAC" class="col-sm-2 col-form-label">Fracturas:</label>
+<div class="col-sm-10">
+    <input type="text" name="fracturas" value="{{$usuario[0]->antecedentes[0]->fracturas}}"class="form-control">
+</div>
+</div>
+
+<!--quinto doble en bloque-->
+
+<div class="col-md-12 form-group row">
+<label for="inputADE" class="col-sm-3 col-form-label">Antecedente de enfermedades:</label>
+<div class="col-sm-8">
+    <input type="text" name="antecedentesenfermedades" value="{{$usuario[0]->antecedentes[0]->antecedentes_enfermedades}}" class="form-control">
+</div>
+</div>
+
+<div class="col-md-12 form-group row">
+<label for="inputTPP" class="col-sm-4 col-form-label">Trastornos psicológicos o psiquiátricos:</label>
+<div class="col-sm-7">
+    <input type="text" name="trastornos" value="{{$usuario[0]->antecedentes[0]->trastornos_psicotricos}}" class="form-control">
+</div>
+</div>
+
+
+<!--sexto doble en bloque-->
+<div class="col-md-12 form-group row">
+<label for="inputILUA" class="col-sm-4 col-form-label">Incapacidad más larga en el último año:</label>
+    <div class="col-sm-7">
+    <input type="text" name="incapacidadmaslarga" value="{{$usuario[0]->antecedentes[0]->incapacidad_mas_larga}}"class="form-control">
+    </div>
+</div>
+
+<div class="col-md-12 form-group row">
+    <label for="inputER" class="col-sm-3 col-form-label">Enfermedades respiratorias:</label>
+    <div class="col-sm-8">
+    <input type="text" name="enfermedadesrespiratorias" value="{{$usuario[0]->antecedentes[0]->enfermedades_respiratorias}}"class="form-control">
+    </div>
+</div>
+
+<!--septimo doble-->
+
+<div class="col-md-12 form-group row">
+<label for="inputEQGI" class="col-sm-4 col-form-label">Enfermedades que han generado incapacidad:</label>
+    <div class="col-sm-7">
+    <input type="text" name="enfermedadegeneradoincapacidad" value="{{$usuario[0]->antecedentes[0]->enfermedades_incapacidad}}"class="form-control">
+    </div>
+</div>
+
+<div class="col-md-12 form-group row">
+    <label for="inputDC" class="col-sm-2 col-form-label">Dolores crónicos:</label>
+    <div class="col-sm-9">
+    <input type="text" name="dolorescronicos" value="{{$usuario[0]->antecedentes[0]->dolores_cronicos}}"class="form-control">
+    </div>
+</div>
+
+
+<div class="col-md-12 form-group row">
+<label for="inputOB" class="col-sm-2 col-form-label">Observaciones:</label>
+<div class="col-sm-9">
+<input type="text" name="observaciones" value="{{$usuario[0]->antecedentes[0]->observaciones}}"class="form-control">
+</div>
+</div>
+</div>
+
+
+<!--punto nuevo-->
+
+<h2 class="text-center mt-3">6. COMPETENCIAS ESPECIFICAS</h2>
+
+<div class="row mt-3">
+<!--bloque 6.1-->
+<div class="col-md-4">
+<h5 class="text-center">6.1. Manejo de medios tecnológicos</h5>
+<!--radio word-->
+<div class="row">
+<legend class="col-form-label col-sm-2 pt-0">WORD</legend>
+ <input name="word" value="{{$usuario[0]->antecedentes[0]->word}}" class="form-control">
+  <!--radio excel-->
+<legend class="col-form-label col-sm-2 pt-0">EXCEL</legend>
+
+<input name="excel" value="{{$usuario[0]->antecedentes[0]->excel}}" class="form-control">
+ 
+<!--radio powerpoint-->
+<legend class="col-form-label col-sm-2 pt-0">PPOINT</legend>
+<input name="powerpoint" value="{{$usuario[0]->antecedentes[0]->ppoint}}" class="form-control">
+ 
+<!--text otros-->
+<div>
+<label for="inputOTRO" class="col-sm-2 col-form-label">Otros:</label>
+<div class="col-sm-10">
+<input name="otros" value="{{$usuario[0]->antecedentes[0]->otros}}" class="form-control">
+</div>
+
+</div>
+</div>
+</div>
+<!--fin 6.1-->
+<!--inicio 6.2-->
+<div class="col-md-5">
+<h5 class="text-center">6.2. Habilidades comunicativas</h5>
+<!--radio Riqueza del vocabulario-->
+<div class="row">
+<legend class="col-form-label col-sm-6 pt-0">Riqueza del vocabulario</legend>
+
+<input name="riquesa" value="{{$usuario[0]->antecedentes[0]->riquesa_del_vocavulario}}" class="form-control">
+ 
+
+<!--radio fluidez verbal-->
+<legend class="col-form-label col-sm-6 pt-0">Fluidez verbal</legend>
+
+<input name="fluidezverbal" value="{{$usuario[0]->antecedentes[0]->fluidez_verbal}}" class="form-control">
+ 
+
+
+<!--radio precision-->
+<legend class="col-form-label col-sm-6 pt-0">Precisión</legend>
+
+<input name="presicion" value="{{$usuario[0]->antecedentes[0]->precision}}" class="form-control">
+
+
+
+<!--valor global del lenguaje verbal-->
+<legend class="col-form-label col-sm-6 pt-0">Valor global del lenguaje verbal</legend>
+
+<input name="valorglobal" value="{{$usuario[0]->antecedentes[0]->valor_global}}" class="form-control">
+
+
+</div>
+</div>
+<!--fin 6.2-->
+<!--inicio 6.3-->
+<div class="col-md-3">
+<h5 class="text-center">6.3. Otros conocimientos</h5>
+<div class="col-md-12 form-group row">
+<label for="inputPEDA" class="col-sm-12 col-form-label">Pedagogía:</label>
+<div class="col-sm-12">
+<input name="pedagogia" value="{{$usuario[0]->antecedentes[0]->pedagogia}}" class="form-control">
+</div>
+</div>
+
+<div class="col-md-12 form-group row">
+<label for="inputLEGI" class="col-sm-12 col-form-label">Legislación:</label>
+<div class="col-sm-12">
+<input name="legislacion" value="{{$usuario[0]->antecedentes[0]->legislacion}}" class="form-control">
+</div>
+</div>
+</div>
+<div class="col-md-12 form-group row">
+<label for="inputLEGI" class="col-sm-12 col-form-label">ver perfil y funciones:</label>
+<div class="col-sm-12">
+<input name="perfilesfunciones" value="{{$usuario[0]->antecedentes[0]->ver_perfil_y_funciones}}" class="form-control">
+</div>
+</div>
+<div class="col-md-12 form-group row">
+<label for="inputOBSE" class="col-sm-2 col-form-label">Observaciones:</label>
+<div class="col-sm-12">
+<input name="observaciones2" value="{{$usuario[0]->antecedentes[0]->observaciones2}}" class="form-control">
+</div>
+</div>
+</div>
+<!--fin 6.3-->
+
+<!--inicio 7. motivacion-->
+
+<h2 class="text-center mt-3">7. MOTIVACION</h2>
+
+<div class="col-md-12 form-group row mt-3">
+<label for="inputMPLC" class="col-sm-12 col-form-label">Motivacion para laborar en Coomulsap:</label>
+<div class="col-sm-10">
+<input name="motivacion" value="{{$usuario[0]->antecedentes[0]->motivacion_en_coomulsap}}" class="form-control">
+</div>
+</div>
+
+<div class="col-md-12 form-group row">
+<label for="inputPMCP" class="col-sm-12 col-form-label">Proyecto a mediano y corto plazo:</label>
+<div class="col-sm-10">
+<input name="proyectoamedianoylargoplazo" value="{{$usuario[0]->antecedentes[0]->proyecto_a_mediano}}" class="form-control">
+</div>
+</div>
+
+<div class="col-md-12 form-group row">
+<label for="inputDRP" class="col-sm-12 col-form-label">Disponibilidad a los requerimientos del puesto:</label>
+<div class="col-sm-10">
+<input name="disponibilidaddelpuesto" value="{{$usuario[0]->antecedentes[0]->disponibilidad_puesto}}" class="form-control">
+</div>
+</div>
+
+<div class="col-md-12 form-group row">
+<label for="inputECSO" class="col-sm-12 col-form-label">Retribucion: expectativas del candidato y comentarios sobre la oferta que se le hace:</label>
+<div class="col-sm-10">
+<input name="retribucion" value="{{$usuario[0]->antecedentes[0]->retribucion_expectativas}}" class="form-control">
+</div>
+</div>
+<!--fin 7-->
+<!--inicio 8. historia familiar-->
+<h2 class="text-center mt-3">8. HISTORIA FAMILIAR</h2>
+<div class="form-group mt-3">
+<input name="historiafamiliar" value="{{$usuario[0]->antecedentes[0]->historia_familiar}}" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<label for="conceptoentre1">Concepto segundo entrevistador:</label>
+<input name="conceptoentrevistador" value="{{$usuario[0]->antecedentes[0]->concepto_segundo_entrevistador}}" class="form-control">
+</div>
+
+<div class="col-md-12 form-group row mt-3">
+<label for="inputOUIT" class="col-sm-12 col-form-label">¿Oculto usted información para obtener este trabajo?</label>
+<div class="col-sm-10">
+<input name="oculto" value="{{$usuario[0]->antecedentes[0]->oculto_informacion}}" class="form-control">
+</div>
+</div>
+
+
+<div class="col-md-12 form-group row mt-3">
+<label for="inputRESP" class="col-sm-12 col-form-label">Responsable:</label>
+<div class="col-sm-10">
+<input name="responsable" value="{{$usuario[0]->antecedentes[0]->responsable}}" class="form-control">
+</div>
+</div>
+
+</form>
+
+</div>
+</div>
+
+<div class="container">
+	    @csrf
+<body>
+  <div class="container">
+	<form>
+		 <h2 class="text-center mt-4">9. Evaluacion de Candidato por Gerencia.</h2>
+		 <!--primer doble-->
+
+<div class="row mt-4">
+
+<div class="col-md-6 form-group row">
+    <label for="inputFEC" class="col-sm-3 col-form-label">Fecha:</label>
+    <div class="col-sm-9">
+    <input name="fecha" value="{{$usuario[0]->evaluacion[0]->fecha}}" class="form-control">
+  </div>
+</div>
+
+
+<div class="col-md-6 form-group row">
+    <label for="inputHC" class="col-sm-3 col-form-label">Hora citado:</label>
+    <div class="col-sm-9">
+    <input name="horacitacion" value="{{$usuario[0]->evaluacion[0]->hora_citado}}" class="form-control">
+    </div>
+  </div>
+  <!--solo-->
+
+
+<!--solo-->
+
+<div class="col-md-12 form-group row">
+    <label for="inputNAA" class="col-sm-2 col-form-label">Nombre del proyecto:</label>
+    <div class="col-sm-10">
+    <input name="nombredelproyecto" value="{{$usuario[0]->evaluacion[0]->nombre_del_proyecto}}" class="form-control">
+    </div>
+  </div>
+
+<div class="col-md-12 form-group row">
+    <label for="inputNAA" class="col-sm-2 col-form-label">Director del proyecto:</label>
+    <div class="col-sm-10">
+    <input name="directordelproyecto" value="{{$usuario[0]->evaluacion[0]->director_del_proyecto}}" class="form-control">
+    </div>
+  </div>
+  
+<div class="col-md-12 form-group row">
+    <label for="inputNAA" class="col-sm-2 col-form-label">Nombres y apellidos del aspirante:</label>
+    <div class="col-sm-10">
+    <input name="nombrecompletoaspirante" value="{{$usuario[0]->evaluacion[0]->nombre_y_apellido_del_aspirante}}" class="form-control">
+    </div>
+  </div>
+
+<div class="col-md-12 form-group row">
+    <label for="inputNAA" class="col-sm-2 col-form-label">Profesion y cargo al que aspira:</label>
+    <div class="col-sm-10">
+    <input name="profesionalqueaspira" value="{{$usuario[0]->evaluacion[0]->profesion_y_cargo_al_que_aspira}}" class="form-control">
+    </div>
+  </div>
+  </div>
+  </div>
+<div class="container">
+  <h2 class="text-center mt-4">10. Informacion Personal del Candidato.</h2>
+  <div class="col-md-12 form-group row">
+    <label for="inputNAA" class="col-sm-12 col-form-label">Que actividades realiza en el tiempo libre:</label>
+    <div class="col-sm-12">
+    <input name="actividadquerealizatiempolibre" value="{{$usuario[0]->evaluacion[0]->actividad}}" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-12 form-group row">
+    <label for="inputNAA" class="col-sm-12 col-form-label">Metas y proyectos a corto y mediano plazo:</label>
+    <div class="col-sm-12">
+    <input name="metas" value="{{$usuario[0]->evaluacion[0]->metas}}" class="form-control">
+    </div>
+  </div>
+</div>
+
+           
+                <th colspan="12" scope="col"><h4 class="text-center">11.Habilidades Comunicativa del Candidato</h4></th>
+           
+            <tbody>
+                        
+                <td>Articula ideas de forma eficaz</td>
+                <td><br></td>
+                <input name="articulaideas" value="{{$usuario[0]->evaluacion[0]->articula_ideas}}" class="form-control">
+              </tbody>
+              <tbody>
+             <tr>
+                <td>Se expresa correctamente</td>
+                <td><br></td>
+              	<input name="expresacorrectamente" value="{{$usuario[0]->evaluacion[0]->se_expresa}}" class="form-control">
+          
+              </tr>
+               <tr>
+                <td>Posee capacidad de escucha</td>
+                <td><br></td>
+                <input name="poseeescucha" value="{{$usuario[0]->evaluacion[0]->escucha}}" class="form-control">
+       
+              </tr>
+               </tbody>
+          </table>
+        
+            <thead>
+              <tr>
+                <th colspan="12" scope="col"><h4 class="text-center">12.Impresion General</h4></th>
+              </tr>
+            </thead>
+            <tbody>
+           
+              <td>ideas generales sobre pedagogia educacion y didactica</td>
+                <td><br></td>
+              	<input name="ideasgenerales" value="{{$usuario[0]->evaluacion[0]->ideas}}" class="form-control">
+          
+              </tr>
+             <tr>
+                <td>Entorno social y fisico en el que vive</td>
+              	<td><br></td>
+                <input name="entorno" value="{{$usuario[0]->evaluacion[0]->entorno}}" class="form-control">
+          
+              </tr>
+               <tr>
+                <td>Administracion del tiempo libre</td>
+                <td><br></td>
+              	<input name="administracion" value="{{$usuario[0]->evaluacion[0]->administracion}}" class="form-control">
+         
+              </tr>
+              <tr>
+                <td>Conocimiento sobre legislacion educativa</td>
+              	<td><br></td>
+              	<input name="conocimiento" value="{{$usuario[0]->evaluacion[0]->conocimiento}}" class="form-control">
+          
+              </tr>
+              <tr>
+                <td>Metodologia de enseñanza educativa</td>
+              	<td><br></td>
+              	<input name="metodologia" value="{{$usuario[0]->evaluacion[0]->metodologia}}" class="form-control">
+          
+              </tr>
+              <tr>
+                <td>Manejo de la disciplina y control del grupo</td>
+              	<td><br></td>
+              	<input name="manejo" value="{{$usuario[0]->evaluacion[0]->manejo}}" class="form-control">
+         
+              </tr>
+              <tr>
+                <td>Presentacion personal</td>
+              	<td><br></td>
+                <input name="presentacion" value="{{$usuario[0]->evaluacion[0]->presentacion}}" class="form-control">
+         
+              </tr>
+              <tr>
+                <td>Actitud y aptitud reflejada en la entrevista</td>
+              	<td><br></td>
+                <input name="actitud" value="{{$usuario[0]->evaluacion[0]->actitud}}" class="form-control">
+         
+              </tr>
+               </tbody>
+         
+          <thead>
+              <tr>
+                <th colspan="12" scope="col"><h4 class="text-center">13.Observaciones Generales</h4></th>
+              </tr>
+            </thead>
+            <tr>
+            <input name="observacionesgenerales" value="{{$usuario[0]->evaluacion[0]->observaciones_generales}}" class="form-control">
+
+           
+            </div>
+
+
 
 
            <button type="submit" class="btn btn-primary">Actualizar</button>    
