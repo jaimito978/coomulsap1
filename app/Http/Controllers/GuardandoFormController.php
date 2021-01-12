@@ -344,6 +344,73 @@ class GuardandoFormController extends Controller
         $datos2->observaciones4= $request->observaciones4;
         $datos2->save();
 
+        $datos3 =  GuardandoForm::where('aspirante_id',$id)->first();
+        //dd($datos3);
+
+        $datos3->eps=$request->Eps;
+        $datos3->afp=$request->AFP;
+        $datos3->ultima_consulta_medica=$request->ultima;
+        $datos3->cirugias=$request->cirugias;
+        $datos3->motivo_consulta=$request->motivoconsulta;
+        $datos3->intoxicaciones=$request->intoxicaciones;
+        $datos3->accidentes_sufridos=$request->accidentessufridos;
+        $datos3->fracturas=$request->fracturas;
+        $datos3->antecedentes_enfermedades=$request->antecedentesenfermedades;
+        $datos3->trastornos_psicotricos=$request->trastornos;
+        $datos3->incapacidad_mas_larga=$request->incapacidadmaslarga;
+        $datos3->enfermedades_respiratorias=$request->enfermedadesrespiratorias;
+        $datos3->enfermedades_incapacidad=$request->enfermedadegeneradoincapacidad;
+        $datos3->dolores_cronicos=$request->dolorescronicos;
+        $datos3->observaciones=$request->observaciones;
+        $datos3->word=$request->word;
+        $datos3->excel=$request->excel;
+        $datos3->ppoint=$request->powerpoint;
+        $datos3->otros=$request->otros;
+        $datos3->riquesa_del_vocavulario=$request->riquesa;
+        $datos3->fluidez_verbal=$request->fluidezverbal;
+        $datos3->legislacion=$request->legislacion;
+        $datos3->ver_perfil_y_funciones=$request->perfilesfunciones;
+        $datos3->observaciones2=$request->observaciones2;
+        $datos3->motivacion_en_coomulsap=$request->motivacion;
+        $datos3->proyecto_a_mediano=$request->proyectoamedianoylargoplazo;
+        $datos3->disponibilidad_puesto=$request->disponibilidaddelpuesto;
+        $datos3->retribucion_expectativas=$request->retribucion;
+        $datos3->historia_familiar=$request->historiafamiliar;
+        $datos3->concepto_segundo_entrevistador=$request->conceptoentrevistador;
+        $datos3->oculto_informacion=$request->oculto;
+        $datos3->responsable=$request->responsable;
+        $datos3->save();
+
+        $datos4 =  Evaluacion::where('aspirante_id',$id)->first();
+        //dd($datos3);
+
+        $datos4->fecha=$request->fecha;
+        $datos4->hora_citado=$request->horacitacion;
+        $datos4->nombre_del_proyecto=$request->nombredelproyecto;
+        $datos4->director_del_proyecto=$request->directordelproyecto;
+        $datos4->nombre_y_apellido_del_aspirante=$request->nombrecompletoaspirante;
+        $datos4->profesion_y_cargo_al_que_aspira=$request->profesionalqueaspira;
+        $datos4->evaluacion[0]->actividad=$request->actividadquerealizatiempolibre;
+        $datos4->metas=$request->metas;
+        $datos4->articula_ideas=$request->articulaideas;
+        $datos4->se_expresa=$request->expresacorrectamente;
+        $datos4->escucha=$request->poseeescucha;
+        $datos4->ideas=$request->ideasgenerales;
+        $datos4->entorno=$request->entorno;
+        $datos4->administracion=$request->administracion;
+        $datos4->conocimiento=$request->conocimiento;
+        $datos4->metodologia=$request->metodologia;
+        $datos4->manejo=$request->manejo;
+        $datos4->presentacion=$request->presentacion;
+        $datos4->actitud=$request->actitud;
+        $datos4->observaciones_generales=$request->observacionesgenerales;
+        $datos4->save();
+
+
+       
+
+
+
 
         
         return view('home');
