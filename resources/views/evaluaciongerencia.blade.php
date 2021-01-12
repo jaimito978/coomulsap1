@@ -60,21 +60,7 @@
   </div>
   </div>
   </div>
-<div class="container">
-  <h2 class="text-center mt-4">10. Informacion Personal del Candidato.</h2>
-  <div class="col-md-12 form-group row">
-    <label for="inputNAA" class="col-sm-12 col-form-label">Que actividades realiza en el tiempo libre:</label>
-    <div class="col-sm-12">
-      <input type="text" class="form-control" id="inputQZR" placeholder="Que actividades realiza en el tiempo libre" name="inputQZR">
-    </div>
-  </div>
-  <div class="col-md-12 form-group row">
-    <label for="inputNAA" class="col-sm-12 col-form-label">Metas y proyectos a corto y mediano plazo:</label>
-    <div class="col-sm-12">
-      <input type="text" class="form-control" id="inputMPPp" placeholder="Metas y proyectos a corto y mediano plazo" name="inputMPP">
-    </div>
-  </div>
-</div>
+
 <table class="table table-bordered table-sm">
             <thead>
               <tr>
