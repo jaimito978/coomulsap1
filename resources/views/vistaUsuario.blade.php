@@ -34,7 +34,7 @@
           <div class="col-md-12 form-group row">
             <label for="inputNAA" class="col-sm-2 col-form-label">Nombre del aspirante:</label>
             <div class="col-sm-9">
-            <input type="text" name="nombreAspirante" value="{{$usuario[0]->nombre_aspirante}}" class="form-control">
+            <input type="text" name="nombreaspirante" value="{{$usuario[0]->nombre_aspirante}}" class="form-control">
             </div>
             </div>
             <!--segundo doble-->

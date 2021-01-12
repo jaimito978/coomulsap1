@@ -235,12 +235,12 @@ class GuardandoFormController extends Controller
      }
 
     public function update(Request $request, $id) {
-        //dd($request->all());
+       //dd($request->all());
         $datos = DatosPersonales::findOrFail($id);
-        
+        //dd($datos);
         $datos->fecha = $request->fecha;
         $datos->hora_citado = $request->hora;
-        $datos->nombre_aspirante =$request->nombreAspirante;
+        $datos->nombre_aspirante =$request->nombreaspirante;
         $datos->cargo =$request->cargo;
         $datos->edad =$request->edad;
         $datos->cedula =$request->cedula;
@@ -300,8 +300,8 @@ class GuardandoFormController extends Controller
         $datos->institucion_edu5 = $request->instiedu5;
         $datos->año_finalizado5= $request->añofinalizado5;
         $datos->titulo_obtenido5 = $request->titulooptenido5;
-        $datos->save;
-
+        $datos->save();
+        
         $datos2 =  datospersonales2::where('aspirante_id',$id)->first();
         //dd($datos2);
         
@@ -382,15 +382,15 @@ class GuardandoFormController extends Controller
         $datos3->save();
 
         $datos4 =  Evaluacion::where('aspirante_id',$id)->first();
-        //dd($datos3);
-
+        //dd($datos4);
+        //dd($request->nombredelproyecto);
         $datos4->fecha=$request->fecha;
         $datos4->hora_citado=$request->horacitacion;
         $datos4->nombre_del_proyecto=$request->nombredelproyecto;
         $datos4->director_del_proyecto=$request->directordelproyecto;
-        $datos4->nombre_y_apellido_del_aspirante=$request->nombrecompletoaspirante;
+        $datos4->nombres_y_apellido_del_aspirante=$request->nombrecompletoaspirante;
         $datos4->profesion_y_cargo_al_que_aspira=$request->profesionalqueaspira;
-        $datos4->evaluacion[0]->actividad=$request->actividadquerealizatiempolibre;
+        $datos4->actividad=$request->actividadquerealizatiempolibre;
         $datos4->metas=$request->metas;
         $datos4->articula_ideas=$request->articulaideas;
         $datos4->se_expresa=$request->expresacorrectamente;
@@ -405,11 +405,6 @@ class GuardandoFormController extends Controller
         $datos4->actitud=$request->actitud;
         $datos4->observaciones_generales=$request->observacionesgenerales;
         $datos4->save();
-
-
-       
-
-
 
 
         
